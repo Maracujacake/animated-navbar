@@ -84,9 +84,23 @@ main{
 .link-text{
     display: none;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .nav-link svg{
     min-width: 2rem;
     margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 14rem;
+}
+
+.navbar:hover .nav-link svg{
+    max-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
 }
