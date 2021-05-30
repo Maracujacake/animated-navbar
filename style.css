@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.clear{
+    clear: both;
+}
+
 :root{
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -81,7 +85,7 @@ main{
     color: var(--text-primary);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
+    transition: 0.5s;
 }
 
 .nav-link:hover{
@@ -116,7 +120,7 @@ main{
 
 .fa-primary{
     color: #ff7eee;
-    transition: var(--transition-speed);
+    transition: 0.5s;
 }
 
 .fa-primary:hover{
@@ -126,4 +130,89 @@ main{
 
 .link-text:hover .fa-primary{
     color: #df49a6;
+}
+
+
+
+.logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg{
+    transition: 0.5s;
+}
+
+.navbar:hover .logo svg{
+    transform: rotate(-180deg);
+}
+
+
+/** RESPONSIVO */
+
+
+@media screen and (max-width: 600px){
+
+.navbar:hover .link-text{
+    display: none;
+}
+
+.navbar .nav-link svg{
+    max-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 37rem;
+    height: 4rem;
+}
+
+.navbar{
+    bottom: 0;
+    width: 100vw;
+    height: 4rem;
+}
+
+.logo{
+    display: none;
+}
+
+.navbar-nav{
+    flex-direction: row;
+}
+
+.nav-link{
+    justify-content: center;
+}
+
+main{
+    margin: 0;
+}
+
+}
+
+
+
+@media screen and (min-width: 600px){
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover{
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text{
+        display: inline;
+        transition: 0.5s;
+    }
 }
