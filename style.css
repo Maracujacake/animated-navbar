@@ -53,6 +53,7 @@ main{
     height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
+    transition: 200ms ease;
 }
 
 .navbar-nav{
@@ -79,6 +80,12 @@ main{
     height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(0%);
 }
 
 .link-text{
@@ -103,4 +110,18 @@ main{
 
 .navbar:hover .link-text{
     display: block;
+}
+
+.fa-primary{
+    color: #ff7eee;
+    transition: var(--transition-speed);
+}
+
+.fa-primary:hover{
+    color: #df49a6;
+    
+}
+
+.link-text:hover .fa-primary{
+    color: #df49a6;
 }
