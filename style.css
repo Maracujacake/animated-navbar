@@ -86,6 +86,8 @@ main{
 
 .nav-link:hover{
     filter: grayscale(0%);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
 }
 
 .link-text{
